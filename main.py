@@ -88,6 +88,5 @@ def save_prepared_images(response, filename):
 #download_hubble_collection_imgs('news')
 
 bot = Bot()
-bot.login(username="LOGIN", password="PASSWORD")
-user_id = bot.get_user_id_from_username("lego")
-print(user_id)
+bot.login(username=LOGIN, password=PASSWORD)
+bot.upload_photo("images/hubble-4639.jpg", caption="Jupiter!")
