@@ -1,12 +1,12 @@
 import requests
-from prepare_images import save_prepared_images
+from prepare_images import save_prepared_image
 
 def fetch_spacex_last_launch(img_url, img_number):
 
   response = requests.get(img_url)
   response.raise_for_status()
 
-  save_prepared_images(response, f'spacex-{img_number+1}.jpg')
+  save_prepared_image(response, f'spacex-{img_number+1}.jpg')
 
 
 
