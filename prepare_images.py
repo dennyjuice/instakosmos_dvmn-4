@@ -21,6 +21,6 @@ def save_prepared_image(response, filename):
     else:
       img.thumbnail(MAX_SIZE)
       img.save(image_path, format="JPEG")
-  except Exception:
+  except (BufferError, IOError):
     logging.warning('Ошибка загрузки картинки. Пропускаем')
     pass
